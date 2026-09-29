@@ -29,18 +29,21 @@
   <strong>YouTube channel, which the operator owns and controls</strong>. The app has no other users.</p>
 
   <h2>What the app does</h2>
-  <p>The app renders video files on the operator's own computer and, on a schedule the operator sets, uploads
-  them to the operator's YouTube channel through the official YouTube Data API v3.</p>
+  <p>The app renders video files on the operator's own computer and sends them to the operator's own private
+  server, which, on a schedule the operator sets, uploads them to the operator's YouTube channel through the
+  official YouTube Data API v3.</p>
 
   <h2>Data the app accesses</h2>
   <ul>
     <li><strong>An OAuth token for the operator's own YouTube account</strong>, used solely to upload videos the
-      app generated, set their thumbnails and read the status of those uploads. The token is stored locally on
-      the operator's own computer and is never shared or transmitted anywhere else.</li>
+      app generated, set their thumbnails and read the status of those uploads. The token is stored on the
+      operator's own computer and in a file readable only by the service account on the operator's private
+      server, and is never shared or transmitted anywhere else.</li>
     <li><strong>Video files, titles, descriptions, tags and thumbnails</strong> created by the app itself.</li>
     <li><strong>The video ids, privacy status, processing state and public view / like / comment counts of the
       operator's own uploads</strong>, returned by YouTube. They are kept in a local log so the same video is
-      never uploaded twice.</li>
+      never uploaded twice, and summarised in a status message sent to the operator's own private Discord
+      channel.</li>
   </ul>
 
   <h2>Data the app does not collect</h2>
@@ -63,15 +66,16 @@
   <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
   <h2>Retention and deletion</h2>
-  <p>Rendered videos and the small upload log (file name, video id, title, upload time) are kept on the
-  operator's computer and can be deleted by the operator at any time. The OAuth token stays valid until the
+  <p>Rendered videos are deleted from the server automatically three days after they are uploaded; a small
+  record of each upload (file name, video id, title, upload time) is kept. The OAuth token stays valid until the
   operator revokes it at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>,
   which immediately ends the app's access; the stored token and upload log are then deleted. Uploaded videos can
   be deleted by the operator in YouTube Studio at any time.</p>
 
   <h2>Third parties</h2>
   <p>The only third party that receives data is Google/YouTube, which receives the uploaded videos and their
-  metadata. Nothing is shared with anyone else.</p>
+  metadata. Status summaries about the operator's own uploads go only to the operator's private Discord
+  channel. Nothing is shared with anyone else.</p>
 
   <h2>Contact</h2>
   <p>Questions about this policy: <a href="mailto:karim.nafili@gmail.com">karim.nafili@gmail.com</a>.</p>
