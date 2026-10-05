@@ -54,14 +54,16 @@
           visuals generated entirely by the app from the music itself: no third-party footage.</li>
       <li>Uploads one finished video per day to the operator's own channel, sets its title, description, chapters,
           tags and thumbnail, and records the resulting video id.</li>
+      <li>Keeps one public playlist on the operator's channel and adds each newly published song to it.</li>
       <li>Reads back the processing status of those uploads so the same video is never uploaded twice.</li>
     </ul>
   </div>
 
   <h2>Google account access</h2>
-  <p>The app requests the <code>youtube.upload</code> and <code>youtube.readonly</code> scopes for a single
-  account: the one that owns the VIVO Volt channel. They are used only to upload the operator's own videos, set
-  their thumbnails, and read the status of those same videos. The app never reads viewer data, comments,
+  <p>The app requests the <code>youtube.upload</code>, <code>youtube.readonly</code> and <code>youtube</code>
+  scopes for a single account: the one that owns the VIVO Volt channel. They are used only to upload the operator's
+  own videos, set their thumbnails, read the status of those same videos, and maintain the channel's own song
+  playlist. The app never reads viewer data, comments,
   messages or audience information, and it acts for no one else's account.</p>
 
   <h2>Who it is for</h2>

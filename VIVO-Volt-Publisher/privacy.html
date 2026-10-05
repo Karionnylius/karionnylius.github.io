@@ -22,7 +22,7 @@
 <div class="strip"></div>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="muted">VIVO Volt Publisher &middot; last updated 5 October 2026</p>
+  <p class="muted">VIVO Volt Publisher &middot; last updated 5 October 2026 (playlist added)</p>
 
   <p>VIVO Volt Publisher ("the app") is a private tool operated by Karim. It generates music videos for the
   operator's own original instrumental music and publishes them to the VIVO Volt <strong>YouTube channel, which
@@ -36,7 +36,8 @@
   <h2>Data the app accesses</h2>
   <ul>
     <li><strong>An OAuth token for the operator's own YouTube account</strong>, used solely to upload videos the
-      app generated, set their thumbnails and read the status of those uploads. The token is stored on the
+      app generated, set their thumbnails, read the status of those uploads and add them to the channel's own
+      playlist. The token is stored on the
       operator's own computer and in a file readable only by the service account on the operator's private
       server, and is never shared or transmitted anywhere else.</li>
     <li><strong>Video files, titles, descriptions, tags and thumbnails</strong> created by the operator and the app.</li>
@@ -56,6 +57,9 @@
       thumbnails.</li>
     <li><code>https://www.googleapis.com/auth/youtube.readonly</code> — confirm the correct channel is linked and
       read the status of the operator's own uploads.</li>
+    <li><code>https://www.googleapis.com/auth/youtube</code> — create one public playlist on the operator's own
+      channel and add the operator's newly published songs to it. It is not used to change, delete or read anything
+      else on the account.</li>
   </ul>
   <p>Use of information received from Google APIs follows the
   <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data
