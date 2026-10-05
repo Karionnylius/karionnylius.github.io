@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VIVO Volt Publisher</title>
+<meta name="description" content="VIVO Volt Publisher renders music videos for the operator's own original instrumental music and uploads them to the operator's own YouTube channel.">
+<meta name="google-site-verification" content="LbEPbgXxHP_gQP6xz-yIb27bI8P2RGNblqaWDHT4-14" />
+<link rel="icon" href="logo.png">
+<style>
+  :root{ --bg:#100b09; --panel:#1b1310; --edge:#3a2a22; --ink:#f7efe4; --muted:#b9a99a;
+         --red:#c2185b; --gold:#e8b13a; --teal:#1b8a8f; }
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1100px 600px at 80% -10%,#3a1a14 0%,transparent 60%),var(--bg);
+       color:var(--ink);font:16px/1.65 system-ui,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+  .strip{height:8px;background:linear-gradient(90deg,var(--red),var(--gold),var(--teal))}
+  header{max-width:880px;margin:0 auto;padding:56px 20px 8px;display:flex;gap:22px;align-items:center}
+  header img{width:104px;height:104px;border-radius:18px}
+  h1{margin:0;font-size:38px;letter-spacing:.3px}
+  .tag{color:var(--gold);font-weight:700;margin-top:6px}
+  main{max-width:880px;margin:0 auto;padding:12px 20px 70px}
+  h2{margin:34px 0 10px;font-size:21px}
+  p,li{color:#eadfd2}
+  .card{background:var(--panel);border:1px solid var(--edge);border-radius:14px;padding:18px 20px;margin:18px 0}
+  a{color:var(--gold)}
+  code{background:#140e0b;border:1px solid var(--edge);padding:1px 6px;border-radius:6px}
+  .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+  .links a{display:inline-block;background:#fff;color:#1b1310;text-decoration:none;font-weight:700;padding:10px 18px;border-radius:999px}
+  .links a.ghost{background:transparent;color:#fff;border:1px solid #ffffff44}
+  footer{border-top:1px solid var(--edge);margin-top:40px;padding-top:18px;color:var(--muted);font-size:14px}
+  @media (max-width:560px){ header{flex-direction:column;align-items:flex-start;padding-top:36px} h1{font-size:30px} }
+</style>
+</head>
+<body>
+<div class="strip"></div>
+
+<header>
+  <img src="logo.png" alt="VIVO Volt Publisher logo">
+  <div>
+    <h1>VIVO Volt Publisher</h1>
+    <div class="tag">Original music videos &rarr; YouTube automation</div>
+  </div>
+</header>
+
+<main>
+  <p>VIVO Volt Publisher is a private tool operated by Karim for the <strong>VIVO Volt</strong> music channel.
+  It turns the operator's own original instrumental music into long-form music videos and uploads them to the
+  <strong>operator's own YouTube channel</strong> using the official YouTube Data API.</p>
+
+  <div class="card">
+    <h2 style="margin-top:0">What the app does</h2>
+    <ul>
+      <li>Masters the operator's own tracks and renders a video for each one, and for compilations of them, with
+          visuals generated entirely by the app from the music itself: no third-party footage.</li>
+      <li>Uploads one finished video per day to the operator's own channel, sets its title, description, chapters,
+          tags and thumbnail, and records the resulting video id.</li>
+      <li>Reads back the processing status of those uploads so the same video is never uploaded twice.</li>
+    </ul>
+  </div>
+
+  <h2>Google account access</h2>
+  <p>The app requests the <code>youtube.upload</code> and <code>youtube.readonly</code> scopes for a single
+  account: the one that owns the VIVO Volt channel. They are used only to upload the operator's own videos, set
+  their thumbnails, and read the status of those same videos. The app never reads viewer data, comments,
+  messages or audience information, and it acts for no one else's account.</p>
+
+  <h2>Who it is for</h2>
+  <p>Nobody signs in to this app but the operator. There are no other users, no accounts to create and no
+  data collected from visitors to this page.</p>
+
+  <div class="links">
+    <a href="privacy.html">Privacy policy</a>
+    <a class="ghost" href="terms.html">Terms of service</a>
+  </div>
+
+  <footer>
+    Operated by Karim (GitHub: <a href="https://github.com/Karionnylius">Karionnylius</a>).
+    Contact: <a href="mailto:karim.nafili@gmail.com">karim.nafili@gmail.com</a>.
+  </footer>
+</main>
+</body>
+</html>
